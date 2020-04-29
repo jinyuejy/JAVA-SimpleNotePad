@@ -651,8 +651,8 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
                bgcolor.Clicked();
         }
         else if(e.getSource()==itemFont){
-                Fontcolor fontcolor=new Fontcolor(jTextArea);
-                fontcolor.Clicked();
+              FontSize fontSize=new FontSize(jTextArea);
+              fontSize.Clicked();
 
         }
         else if(e.getSource()==itemFontColor){

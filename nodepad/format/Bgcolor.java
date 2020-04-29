@@ -14,7 +14,8 @@ import javax.swing.JLabel;
 
 public class Bgcolor {
     JTextArea jTextArea;
-    private Color[] color = { Color.WHITE, Color.BLACK, Color.LIGHT_GRAY, Color.CYAN };
+    private Color[] color = { Color.WHITE, Color.BLACK, Color.LIGHT_GRAY, Color.CYAN ,Color.LIGHT_GRAY,Color.GREEN};
+    private String [] name={"白色","黑色","灰色","青色","浅灰","绿色"};
 
     public Bgcolor(JTextArea j){
         jTextArea=j;
@@ -29,10 +30,12 @@ public class Bgcolor {
         frame.setDefaultCloseOperation(2);
         JPanel panel=new JPanel();
         JLabel label=new JLabel("请选择：");
-        JComboBox<Color> comboBox=new JComboBox<>(color);
+        JComboBox<String> comboBox=new JComboBox<>(name);
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
-               jTextArea.setBackground((Color)comboBox.getSelectedItem());
+                int select =comboBox.getSelectedIndex();
+               jTextArea.setBackground(color[select]);
+               frame.setVisible(false);
                 
             }
 
