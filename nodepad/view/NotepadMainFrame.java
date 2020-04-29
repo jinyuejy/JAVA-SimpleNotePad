@@ -364,7 +364,16 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
         menuBar.add(itFormat);
         
         itemNextLine = new JCheckBoxMenuItem("自动换行(W)");
-       itemNextLine.addActionListener(this);
+//        itemNextLine.addActionListener(this);
+
+         itemNextLine.addChangeListener(new ChangeListener(){
+         
+                 @Override
+                 public void stateChanged(ChangeEvent e) {
+                         Boolean selected =itemNextLine.isSelected();
+                         textArea.setLineWrap(selected);
+                 }
+         });
         itFormat.add(itemNextLine);
         
         itemFont = new JMenuItem("字体大小(F)...");
@@ -384,7 +393,7 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
         menuBar.add(itemCheck);
         
         itemStatement = new JCheckBoxMenuItem("状态栏(S)");
-       itemStatement.addActionListener(this);
+//        itemStatement.addActionListener(this);
        itemStatement.setSelected(false);
         itemCheck.add(itemStatement);
         
@@ -539,6 +548,8 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
         clock.start();
         
         
+
+
         
         // 创建弹出菜单
         final JPopupMenu jp=new JPopupMenu();    //创建弹出式菜单，下面三项是菜单项
