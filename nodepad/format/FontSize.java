@@ -14,8 +14,8 @@ import javax.swing.JLabel;
 public class FontSize {
 
     JTextArea jTextArea;
-    private String [] ziti ={"宋体","微软雅黑","华文行楷","楷体"};
-    private String [] zihao={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16"};
+    private String [] ziti ={"宋体","微软雅黑","华文行楷","楷体","等线","华文隶书","隶书"};
+    private String [] zihao={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22"};
 
     public  FontSize(JTextArea j) {
         jTextArea=j;
