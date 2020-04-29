@@ -11,6 +11,8 @@ import java.awt.*;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+
+import nodepad.view.NotepadMainFrame;
 public class FontSize {
 
     JTextArea jTextArea;
@@ -46,6 +48,7 @@ public class FontSize {
                 int zt=comboBox1.getSelectedIndex();
                 int zh=comboBox2.getSelectedIndex();
                 Font font=new Font(ziti[zt],Font.BOLD,zh);
+                NotepadMainFrame.font=font;
                 jTextArea.setFont(font);
                 frame.setVisible(false);
             }

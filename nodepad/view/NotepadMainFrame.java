@@ -165,6 +165,7 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
     
     public int start=0,end=0;
     public boolean f=false;
+    public static Font font=new Font("ËÎÌו",Font.BOLD,18);
     /**
      * Launch the application.
      */
@@ -656,7 +657,7 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
 
         }
         else if(e.getSource()==itemFontColor){
-                Fontcolor fontcolor=new Fontcolor(jTextArea);
+                Fontcolor fontcolor=new Fontcolor(jTextArea,font);
                 fontcolor.Clicked();
 
         }
@@ -672,6 +673,10 @@ public class NotepadMainFrame extends JFrame implements ActionListener{
         else if(e.getSource()==itemAboutNotepad){
                Help help =new Help();
                help.Clicked();
+        }
+        else if(e.getSource()==itemTime){
+                Time_Date time_Date=new Time_Date(jTextArea);
+                time_Date.Clicked();
         }
     }    
     

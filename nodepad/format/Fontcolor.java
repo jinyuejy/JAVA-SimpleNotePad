@@ -13,12 +13,16 @@ import java.awt.Color;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JLabel;
+
+
 public class Fontcolor {
     JTextArea jTextArea;
     private Color[] color = { Color.WHITE, Color.BLACK, Color.LIGHT_GRAY, Color.CYAN,Color.LIGHT_GRAY };
     private String [] name={"白色","黑色","灰色","青色","浅灰"};
+    Font font;
     
-    public Fontcolor(JTextArea j){
+    public Fontcolor(JTextArea j,Font f){
+        font=f;
         jTextArea=j;
     }
 
@@ -35,8 +39,6 @@ public class Fontcolor {
         button.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e){
                 int select=comboBox.getSelectedIndex();
-
-                Font font =new Font("宋体",Font.BOLD,14);
                 jTextArea.setFont(font);
                 jTextArea.setForeground(color[select]);
                 frame.setVisible(false);
